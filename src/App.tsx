@@ -383,7 +383,6 @@ function App() {
             src="https://api.leadconnectorhq.com/widget/form/Pa6EFHDZSehyAEhGoHJF"
             style={{
               border: '1px solid rgba(255, 255, 255, 0.2)',
-              borderRadius: '12px',
               padding: '10px',
             }}
             className="w-full min-h-[500px]"
