@@ -362,11 +362,11 @@ function App() {
         </div>
       </section>
 
-      {/* Final CTA with Form */}
+   {/* Final CTA with Form */}
       <section className="py-20 bg-gradient-to-br from-blue-900 to-purple-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Transform Your Real Estate Business?
             </h2>
             <p className="text-xl text-gray-300">
@@ -375,11 +375,11 @@ function App() {
           </div>
           
           {/* Form Section */}
-          <div id="contact-form" className="bg-gray-800/50 rounded-xl p-8 pt-16 backdrop-blur-sm mt-8">
+          <div id="contact-form" className="max-w-2xl mx-auto bg-gray-800/50 rounded-xl p-6 backdrop-blur-sm">
             <iframe 
               src="https://api.leadconnectorhq.com/widget/form/Pa6EFHDZSehyAEhGoHJF"
-              frameBorder="0"
-              className="w-full min-h-[600px]"
+              style={{ border: 'none' }}
+              className="w-full min-h-[500px]"
               title="Contact Form"
             ></iframe>
           </div>
