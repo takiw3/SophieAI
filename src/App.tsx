@@ -358,7 +358,7 @@ function App() {
             Ready to Transform Your Real Estate Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join leading real estate professionals leveraging AI to grow their business.
+            Join leading real estate professionals leveraging Sophie to grow their business.
           </p>
           <button className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
             Try Sophie Today
