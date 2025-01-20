@@ -16,6 +16,10 @@ import {
 function App() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   
+  const scrollToForm = () => {
+    document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+  };
+  
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
@@ -29,7 +33,10 @@ function App() {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Sophie is trained on real estate sales scripts that have generated millions in GCI. Book appointments. Qualify leads. Scale your business. 24/7.
             </p>
-            <button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
+            <button 
+              onClick={scrollToForm}
+              className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105"
+            >
               Try Sophie Today
             </button>
             
@@ -237,7 +244,7 @@ function App() {
         </div>
       </section>
 
-      {/* Pricing Section */}
+        {/* Pricing Section */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
@@ -351,18 +358,27 @@ function App() {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* Final CTA with Form */}
       <section className="py-20 bg-gradient-to-br from-blue-900 to-purple-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Your Real Estate Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join leading real estate professionals leveraging Sophie to grow their business.
-          </p>
-          <button className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
-            Try Sophie Today
-          </button>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Real Estate Business?
+            </h2>
+            <p className="text-xl text-gray-300">
+              Join leading real estate professionals leveraging AI to grow their business.
+            </p>
+          </div>
+          
+          {/* Form Section */}
+          <div id="contact-form" className="bg-gray-800/50 rounded-xl p-8 backdrop-blur-sm">
+            <iframe 
+              src="https://api.leadconnectorhq.com/widget/form/Pa6EFHDZSehyAEhGoHJF"
+              frameBorder="0"
+              className="w-full min-h-[600px]"
+              title="Contact Form"
+            ></iframe>
+          </div>
         </div>
       </section>
     </div>
