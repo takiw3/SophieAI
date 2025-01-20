@@ -313,11 +313,12 @@ function App() {
                 price: "$1,000",
                 setup: "$3,500",
                 features: [
-                  "Up to 1,000 conversations/month",
-                  "Basic analytics dashboard",
-                  "Email support",
-                  "Standard response time",
-                  "Basic CRM integration"
+                  "Inbound & Outbound Calls",
+                  "10 Simultaneous Calls",
+                  "Unlimited Call Minutes",
+                  "Basic CRM integration",
+                  "Custom Property Database",
+                  "24/7 365 Availability"
                 ]
               },
               {
@@ -325,12 +326,12 @@ function App() {
                 price: "$1,200",
                 setup: "$4,000",
                 features: [
-                  "Unlimited conversations",
-                  "Advanced analytics & reporting",
-                  "24/7 priority support",
-                  "Custom voice & branding",
+                  "Everything in Standard plus",
+                  "20+ Simultaneous Calls",
+                  "Fully Customizable Use Cases",
+                  "Custom Agent Voice & Branding",
                   "Advanced CRM integration",
-                  "Custom workflow automation"
+                  "24/7 Priority Support"
                 ]
               }
             ].map((plan, index) => (
@@ -349,7 +350,10 @@ function App() {
                     </li>
                   ))}
                 </ul>
-                <button className="w-full bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all">
+                <button 
+                  onClick={scrollToForm} 
+                  className="w-full bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all"
+                >
                   Get Started
                 </button>
               </div>
@@ -371,7 +375,7 @@ function App() {
           </div>
           
           {/* Form Section */}
-          <div id="contact-form" className="bg-gray-800/50 rounded-xl p-8 backdrop-blur-sm">
+          <div id="contact-form" className="bg-gray-800/50 rounded-xl p-8 pt-16 backdrop-blur-sm mt-8">
             <iframe 
               src="https://api.leadconnectorhq.com/widget/form/Pa6EFHDZSehyAEhGoHJF"
               frameBorder="0"
