@@ -240,6 +240,62 @@ function App() {
       {/* Pricing Section */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            Maximize Your ROI
+          </h2>
+          
+          {/* Value Comparison */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="bg-gray-800 rounded-xl p-8">
+              <h3 className="text-2xl font-bold mb-6 text-center">Traditional Sales Setup vs Sophie AI</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <h4 className="text-xl font-semibold text-red-400">Traditional Setup: $5,000/month</h4>
+                  <ul className="space-y-3">
+                    <li className="flex justify-between">
+                      <span>Virtual Assistant</span>
+                      <span className="font-semibold">$1,500/mo</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Deal Admin</span>
+                      <span className="font-semibold">$1,000/mo</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Inside Sales Rep</span>
+                      <span className="font-semibold">$2,500+/mo</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h4 className="text-xl font-semibold text-green-400">Sophie AI: $1,000-1,200/month</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-center space-x-2">
+                      <Check className="w-5 h-5 text-green-400" />
+                      <span>24/7 Availability</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <Check className="w-5 h-5 text-green-400" />
+                      <span>Unlimited Conversations</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <Check className="w-5 h-5 text-green-400" />
+                      <span>No Sick Days or Time Off</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <Check className="w-5 h-5 text-green-400" />
+                      <span>Consistent Performance</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-8 p-4 bg-blue-900/30 rounded-lg">
+                <p className="text-center text-lg">
+                  <span className="font-bold text-blue-400">Save over $45,000 annually</span> while improving lead response times and conversion rates
+                </p>
+              </div>
+            </div>
+          </div>
+
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
             Choose Your Perfect Plan
           </h2>
