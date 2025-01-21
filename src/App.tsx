@@ -338,9 +338,8 @@ function App() {
                   features: [
                     "Inbound & Outbound Calls",
                     "10 Simultaneous Calls",
-                    "Unlimited Call Minutes",
+                    "Unlimited Call Minutes up to 4000 minutes, then $0.13/min",
                     "Basic CRM integration",
-                    "Custom Property Database",
                     "24/7 365 Availability"
                   ]
                 },
