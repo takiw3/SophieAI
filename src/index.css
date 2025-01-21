@@ -4,26 +4,43 @@
 
 @layer base {
   body {
-    background: linear-gradient(
-      135deg,
-      #13001f 0%,
-      #1a0029 25%,
-      #20003d 50%,
-      #1a0029 75%,
-      #13001f 100%
-    );
+    background: #08000f;
     min-height: 100vh;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      circle at 50% 50%,
+      rgba(139, 92, 246, 0.15) 0%,
+      rgba(88, 28, 135, 0.1) 20%,
+      rgba(8, 0, 15, 0.05) 40%,
+      rgba(8, 0, 15, 0) 60%
+    );
+    pointer-events: none;
+    z-index: 0;
   }
 }
 
 .gradient-blur {
-  background: radial-gradient(circle at center, rgba(139, 92, 246, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  background: radial-gradient(
+    circle at center,
+    rgba(139, 92, 246, 0.2) 0%,
+    rgba(88, 28, 135, 0.15) 30%,
+    rgba(0, 0, 0, 0) 70%
+  );
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(139, 92, 246, 0.03);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.08);
 }
 
 .purple-gradient-text {
@@ -38,6 +55,15 @@
 }
 
 .hero-gradient {
-  background: radial-gradient(circle at center, rgba(139, 92, 246, 0.2) 0%, rgba(0, 0, 0, 0) 70%),
-              linear-gradient(to bottom right, rgba(139, 92, 246, 0.1), rgba(0, 0, 0, 0));
+  background: radial-gradient(
+    circle at center,
+    rgba(139, 92, 246, 0.2) 0%,
+    rgba(88, 28, 135, 0.15) 30%,
+    rgba(0, 0, 0, 0) 70%
+  ),
+  linear-gradient(
+    to bottom right,
+    rgba(139, 92, 246, 0.1),
+    rgba(0, 0, 0, 0)
+  );
 }
