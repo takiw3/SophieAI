@@ -5,9 +5,9 @@ export default {
     extend: {
       colors: {
         dark: {
-          DEFAULT: '#13001f',
-          100: '#1a0029',
-          200: '#20003d'
+          DEFAULT: '#08000f',
+          100: '#0a0012',
+          200: '#0c0015'
         },
         purple: {
           glow: '#8b5cf6'
