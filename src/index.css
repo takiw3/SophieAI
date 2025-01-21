@@ -43,6 +43,18 @@
   border: 1px solid rgba(139, 92, 246, 0.08);
 }
 
+.glass-card-dark {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+.glass-card-highlight {
+  background: rgba(139, 92, 246, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+}
+
 .purple-gradient-text {
   background: linear-gradient(to right, #c084fc, #8b5cf6);
   -webkit-background-clip: text;
