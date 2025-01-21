@@ -409,7 +409,7 @@ function App() {
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   padding: '10px',
                 }}
-                className="w-full h-[300px]"
+                className="w-full h-[400px]"
                 title="Contact Form"
               ></iframe>
             </div>
