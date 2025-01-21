@@ -98,20 +98,28 @@ function App() {
               <h3 className="text-2xl font-semibold mb-8">Opportunity Costs</h3>
               <ul className="space-y-6">
                 <li className="flex items-center space-x-4">
-                  <ChevronRight className="w-6 h-6 text-purple-400" />
-                  <span className="text-gray-300">Lost revenue from missed leads</span>
+                  <ChevronRight className="w-6 h-6 text-red-400" />
+                  <span className="text-red-400">Lost revenue from missed leads</span>
                 </li>
                 <li className="flex items-center space-x-4">
-                  <ChevronRight className="w-6 h-6 text-purple-400" />
-                  <span className="text-gray-300">Wasted ad spend</span>
+                  <ChevronRight className="w-6 h-6 text-red-400" />
+                  <span className="text-red-400">Wasted ad spend on unconverted leads</span>
                 </li>
                 <li className="flex items-center space-x-4">
-                  <ChevronRight className="w-6 h-6 text-purple-400" />
-                  <span className="text-gray-300">Time inefficiencies</span>
+                  <ChevronRight className="w-6 h-6 text-red-400" />
+                  <span className="text-red-400">Time spent on mannual follow-ups</span>
                 </li>
                 <li className="flex items-center space-x-4">
-                  <ChevronRight className="w-6 h-6 text-purple-400" />
-                  <span className="text-gray-300">Lost deals</span>
+                  <ChevronRight className="w-6 h-6 text-red-400" />
+                  <span className="text-red-400">Inability to scale efficiently</span>
+                </li>
+                <li className="flex items-center space-x-4">
+                  <ChevronRight className="w-6 h-6 text-red-400" />
+                  <span className="text-red-400">Deals lost to faster competitors</span>
+                </li>
+                <li className="flex items-center space-x-4">
+                  <ChevronRight className="w-6 h-6 text-red-400" />
+                  <span className="text-red-400">Not using cutting-edge AI tech</span>
                 </li>
               </ul>
             </div>
@@ -247,15 +255,15 @@ function App() {
                   <ul className="space-y-4">
                     <li className="flex justify-between p-3 glass-card rounded-xl">
                       <span>Virtual Assistant</span>
-                      <span className="font-semibold">$1,500/mo</span>
+                      <span className="font-semibold text-red-400">$1,500/mo</span>
                     </li>
                     <li className="flex justify-between p-3 glass-card rounded-xl">
                       <span>Deal Admin</span>
-                      <span className="font-semibold">$1,000/mo</span>
+                      <span className="font-semibold text-red-400">$1,000/mo</span>
                     </li>
                     <li className="flex justify-between p-3 glass-card rounded-xl">
                       <span>Inside Sales Rep</span>
-                      <span className="font-semibold">$2,500+/mo</span>
+                      <span className="font-semibold text-red-400">$2,500+/mo</span>
                     </li>
                   </ul>
                 </div>
@@ -263,16 +271,16 @@ function App() {
                   <h4 className="text-xl font-semibold text-purple-400">Sophie AI: $1,000-1,200/month</h4>
                   <ul className="space-y-4">
                     <li className="flex items-center space-x-3 p-3 glass-card rounded-xl">
-                      <Check className="w-5 h-5 text-purple-400" />
-                      <span>24/7 Availability</span>
+                      <Check className="w-5 h-5 text-green-400" />
+                      <span className="text-green-400">24/7 Availability</span>
                     </li>
                     <li className="flex items-center space-x-3 p-3 glass-card rounded-xl">
-                      <Check className="w-5 h-5 text-purple-400" />
-                      <span>Unlimited Conversations</span>
+                      <Check className="w-5 h-5 text-green-400" />
+                      <span className="text-green-400">Unlimited Conversations</span>
                     </li>
                     <li className="flex items-center space-x-3 p-3 glass-card rounded-xl">
-                      <Check className="w-5 h-5 text-purple-400" />
-                      <span>No Sick Days or Time Off</span>
+                      <Check className="w-5 h-5 text-green-400" />
+                      <span className="text-green-400">No Sick Days or Time Off</span>
                     </li>
                   </ul>
                 </div>
