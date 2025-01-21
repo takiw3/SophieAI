@@ -21,36 +21,36 @@ function App() {
   };
   
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-dark text-white">
       {/* Hero Section */}
-      <header className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-blue-900/30 z-0" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32 relative z-10">
+      <header className="relative overflow-hidden py-32">
+        <div className="gradient-blur absolute inset-0" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400 mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold purple-gradient-text mb-8 leading-tight">
               10x Your GCI with Sophie AI
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
               Sophie is trained on real estate sales scripts that have generated millions in GCI. Book appointments. Qualify leads. Scale your business. 24/7.
             </p>
             <button 
               onClick={scrollToForm}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-10 py-5 rounded-xl text-lg font-semibold transition-all transform hover:scale-105 purple-glow"
             >
               Try Sophie Today
             </button>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-              <div className="bg-gray-800/50 p-6 rounded-xl backdrop-blur-sm">
-                <p className="text-3xl font-bold text-blue-400">100%</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24">
+              <div className="glass-card p-8 rounded-2xl">
+                <p className="text-4xl font-bold text-purple-400 mb-2">100%</p>
                 <p className="text-gray-400">Lead Response Rate</p>
               </div>
-              <div className="bg-gray-800/50 p-6 rounded-xl backdrop-blur-sm">
-                <p className="text-3xl font-bold text-blue-400">24/7</p>
+              <div className="glass-card p-8 rounded-2xl">
+                <p className="text-4xl font-bold text-purple-400 mb-2">24/7</p>
                 <p className="text-gray-400">Always Available</p>
               </div>
-              <div className="bg-gray-800/50 p-6 rounded-xl backdrop-blur-sm">
-                <p className="text-3xl font-bold text-blue-400">10X</p>
+              <div className="glass-card p-8 rounded-2xl">
+                <p className="text-4xl font-bold text-purple-400 mb-2">10X</p>
                 <p className="text-gray-400">Lead Engagement</p>
               </div>
             </div>
@@ -59,59 +59,59 @@ function App() {
       </header>
 
       {/* Problem Section */}
-      <section className="py-20 bg-gray-800">
+      <section className="py-32 bg-dark-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-20 purple-gradient-text">
             The Real Estate Lead Problem
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="bg-red-500/10 p-3 rounded-lg">
-                  <MessageSquare className="w-6 h-6 text-red-500" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div className="space-y-8">
+              <div className="glass-card p-6 rounded-2xl flex items-start space-x-6">
+                <div className="bg-purple-600/10 p-4 rounded-xl">
+                  <MessageSquare className="w-8 h-8 text-purple-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Missed Opportunities</h3>
+                  <h3 className="text-xl font-semibold mb-3">Missed Opportunities</h3>
                   <p className="text-gray-400">47% of leads never receive a follow-up call</p>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="bg-orange-500/10 p-3 rounded-lg">
-                  <Clock className="w-6 h-6 text-orange-500" />
+              <div className="glass-card p-6 rounded-2xl flex items-start space-x-6">
+                <div className="bg-purple-600/10 p-4 rounded-xl">
+                  <Clock className="w-8 h-8 text-purple-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Slow Response Times</h3>
+                  <h3 className="text-xl font-semibold mb-3">Slow Response Times</h3>
                   <p className="text-gray-400">78% of deals go to the first responder</p>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="bg-yellow-500/10 p-3 rounded-lg">
-                  <BarChart3 className="w-6 h-6 text-yellow-500" />
+              <div className="glass-card p-6 rounded-2xl flex items-start space-x-6">
+                <div className="bg-purple-600/10 p-4 rounded-xl">
+                  <BarChart3 className="w-8 h-8 text-purple-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Manual Follow-ups</h3>
+                  <h3 className="text-xl font-semibold mb-3">Manual Follow-ups</h3>
                   <p className="text-gray-400">8+ hours wasted weekly</p>
                 </div>
               </div>
             </div>
-            <div className="bg-gray-900 rounded-xl p-8">
-              <h3 className="text-xl font-semibold mb-6">Opportunity Costs</h3>
-              <ul className="space-y-4">
-                <li className="flex items-center space-x-3">
-                  <ChevronRight className="w-5 h-5 text-red-500" />
-                  <span className="text-gray-400">Lost revenue from missed leads</span>
+            <div className="glass-card p-8 rounded-2xl">
+              <h3 className="text-2xl font-semibold mb-8">Opportunity Costs</h3>
+              <ul className="space-y-6">
+                <li className="flex items-center space-x-4">
+                  <ChevronRight className="w-6 h-6 text-purple-400" />
+                  <span className="text-gray-300">Lost revenue from missed leads</span>
                 </li>
-                <li className="flex items-center space-x-3">
-                  <ChevronRight className="w-5 h-5 text-red-500" />
-                  <span className="text-gray-400">Wasted ad spend</span>
+                <li className="flex items-center space-x-4">
+                  <ChevronRight className="w-6 h-6 text-purple-400" />
+                  <span className="text-gray-300">Wasted ad spend</span>
                 </li>
-                <li className="flex items-center space-x-3">
-                  <ChevronRight className="w-5 h-5 text-red-500" />
-                  <span className="text-gray-400">Time inefficiencies</span>
+                <li className="flex items-center space-x-4">
+                  <ChevronRight className="w-6 h-6 text-purple-400" />
+                  <span className="text-gray-300">Time inefficiencies</span>
                 </li>
-                <li className="flex items-center space-x-3">
-                  <ChevronRight className="w-5 h-5 text-red-500" />
-                  <span className="text-gray-400">Lost deals</span>
+                <li className="flex items-center space-x-4">
+                  <ChevronRight className="w-6 h-6 text-purple-400" />
+                  <span className="text-gray-300">Lost deals</span>
                 </li>
               </ul>
             </div>
@@ -120,9 +120,10 @@ function App() {
       </section>
 
       {/* Solution Section */}
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+      <section className="py-32 bg-dark relative overflow-hidden">
+        <div className="gradient-blur absolute inset-0" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-20 purple-gradient-text">
             How Sophie AI Solves These Problems
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -158,11 +159,11 @@ function App() {
                 description: "Handle unlimited concurrent conversations"
               }
             ].map((feature, index) => (
-              <div key={index} className="bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition-all">
-                <div className="bg-blue-500/10 p-4 rounded-lg w-fit mb-4">
+              <div key={index} className="glass-card p-8 rounded-2xl hover:shadow-purple-glow transition-all duration-300">
+                <div className="bg-purple-600/10 p-4 rounded-xl w-fit mb-6">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                 <p className="text-gray-400">{feature.description}</p>
               </div>
             ))}
@@ -171,9 +172,9 @@ function App() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-800">
+      <section className="py-32 bg-dark-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-20 purple-gradient-text">
             Frequently Asked Questions
           </h2>
           <div className="max-w-3xl mx-auto space-y-4">
@@ -201,38 +202,22 @@ function App() {
               {
                 question: "Is Sophie AI customizable to my specific business needs?",
                 answer: "Absolutely. Sophie AI can be tailored to match your business goals, sales scripts, and branding. The Advanced Plan even includes a fully customizable voice agent with adjustable tone and responses to fit your style."
-              },
-              {
-                question: "Can Sophie AI assist with property recommendations?",
-                answer: "Yes, Sophie uses AI-powered algorithms to recommend properties that best match a lead's preferences, helping you close deals faster and with greater accuracy."
-              },
-              {
-                question: "Does Sophie work with existing phone systems?",
-                answer: "Sophie AI integrates easily with your existing phone systems and VoIP solutions. Our team will handle the setup to ensure a seamless experience."
-              },
-              {
-                question: "Does Sophie support multilingual capabilities?",
-                answer: "Currently, Sophie supports English but she is built to support additional languages including French, Spanish, Chinese, Hindi, German, Japanese, Portuguese, and more. Additional languages can be added upon request for businesses serving multilingual markets."
-              },
-              {
-                question: "What kind of support does your team provide?",
-                answer: "We offer: 24/7 technical support for Advanced Plan users, priority assistance for all setup and integrations, and a dedicated success manager for large teams and brokerages."
               }
             ].map((faq, index) => (
-              <div key={index} className="bg-gray-900 rounded-lg overflow-hidden">
+              <div key={index} className="glass-card rounded-xl overflow-hidden">
                 <button
-                  className="w-full px-6 py-4 text-left flex justify-between items-center"
+                  className="w-full px-8 py-6 text-left flex justify-between items-center"
                   onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
                 >
-                  <span className="font-semibold">{faq.question}</span>
+                  <span className="font-semibold text-lg">{faq.question}</span>
                   <ChevronRight
-                    className={`w-5 h-5 transform transition-transform ${
+                    className={`w-6 h-6 text-purple-400 transform transition-transform ${
                       openFAQ === index ? 'rotate-90' : ''
                     }`}
                   />
                 </button>
                 <div
-                  className={`px-6 py-4 text-gray-400 transition-all ${
+                  className={`px-8 py-6 text-gray-400 transition-all ${
                     openFAQ === index ? 'block' : 'hidden'
                   }`}
                 >
@@ -244,66 +229,63 @@ function App() {
         </div>
       </section>
 
-        {/* Pricing Section */}
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+      {/* Pricing Section */}
+      <section className="py-32 bg-dark relative overflow-hidden">
+        <div className="gradient-blur absolute inset-0" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 purple-gradient-text">
             Maximize Your ROI
           </h2>
           
           {/* Value Comparison */}
-          <div className="max-w-4xl mx-auto mb-16">
-            <div className="bg-gray-800 rounded-xl p-8">
-              <h3 className="text-2xl font-bold mb-6 text-center">Traditional Sales Setup vs Sophie AI</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-4">
+          <div className="max-w-4xl mx-auto mb-20">
+            <div className="glass-card rounded-2xl p-10">
+              <h3 className="text-2xl font-bold mb-10 text-center">Traditional Sales Setup vs Sophie AI</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div className="space-y-6">
                   <h4 className="text-xl font-semibold text-red-400">Traditional Setup: $5,000/month</h4>
-                  <ul className="space-y-3">
-                    <li className="flex justify-between">
+                  <ul className="space-y-4">
+                    <li className="flex justify-between p-3 glass-card rounded-xl">
                       <span>Virtual Assistant</span>
                       <span className="font-semibold">$1,500/mo</span>
                     </li>
-                    <li className="flex justify-between">
+                    <li className="flex justify-between p-3 glass-card rounded-xl">
                       <span>Deal Admin</span>
                       <span className="font-semibold">$1,000/mo</span>
                     </li>
-                    <li className="flex justify-between">
+                    <li className="flex justify-between p-3 glass-card rounded-xl">
                       <span>Inside Sales Rep</span>
                       <span className="font-semibold">$2,500+/mo</span>
                     </li>
                   </ul>
                 </div>
-                <div className="space-y-4">
-                  <h4 className="text-xl font-semibold text-green-400">Sophie AI: $1,000-1,200/month</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-center space-x-2">
-                      <Check className="w-5 h-5 text-green-400" />
+                <div className="space-y-6">
+                  <h4 className="text-xl font-semibold text-purple-400">Sophie AI: $1,000-1,200/month</h4>
+                  <ul className="space-y-4">
+                    <li className="flex items-center space-x-3 p-3 glass-card rounded-xl">
+                      <Check className="w-5 h-5 text-purple-400" />
                       <span>24/7 Availability</span>
                     </li>
-                    <li className="flex items-center space-x-2">
-                      <Check className="w-5 h-5 text-green-400" />
+                    <li className="flex items-center space-x-3 p-3 glass-card rounded-xl">
+                      <Check className="w-5 h-5 text-purple-400" />
                       <span>Unlimited Conversations</span>
                     </li>
-                    <li className="flex items-center space-x-2">
-                      <Check className="w-5 h-5 text-green-400" />
+                    <li className="flex items-center space-x-3 p-3 glass-card rounded-xl">
+                      <Check className="w-5 h-5 text-purple-400" />
                       <span>No Sick Days or Time Off</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <Check className="w-5 h-5 text-green-400" />
-                      <span>Consistent Performance</span>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div className="mt-8 p-4 bg-blue-900/30 rounded-lg">
+              <div className="mt-10 p-6 glass-card rounded-xl bg-purple-600/10">
                 <p className="text-center text-lg">
-                  <span className="font-bold text-blue-400">Save over $45,000 annually</span> while improving lead response times and conversion rates
+                  <span className="font-bold text-purple-400">Save over $45,000 annually</span> while improving lead response times and conversion rates
                 </p>
               </div>
             </div>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-20 purple-gradient-text">
             Choose Your Perfect Plan
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -335,62 +317,63 @@ function App() {
                 ]
               }
             ].map((plan, index) => (
-              <div key={index} className="bg-gray-800 rounded-xl p-8">
-                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                <div className="mb-6">
-                  <span className="text-3xl font-bold">{plan.price}</span>
+              <div key={index} className="glass-card p-10 rounded-2xl hover:shadow-purple-glow-lg transition-all duration-300">
+                <h3 className="text-2xl font-bold mb-3">{plan.name}</h3>
+                <div className="mb-8">
+                  <span className="text-4xl font-bold purple-gradient-text">{plan.price}</span>
                   <span className="text-gray-400">/month</span>
                   <p className="text-gray-400">+{plan.setup} setup</p>
+                  <p className="text-purple-400 mt-3 flex items-center"> </p>
                 </div>
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-center space-x-3">
-                      <Check className="w-5 h-5 text-blue-500" />
+                      <Check className="w-5 h-5 text-purple-400" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <button 
-                  onClick={scrollToForm} 
-                  className="w-full bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all"
+                  onClick={scrollToForm}
+                  className="w-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-4 rounded-xl font-semibold transition-all purple-glow"
                 >
-                  Get Started
+                  Get Started Today
                 </button>
               </div>
             ))}
           </div>
         </div>
       </section>
-   
-   {/* Final CTA with Form */}
-     <section className="py-20 bg-gradient-to-br from-blue-900 to-purple-900">
-       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Ready to Transform Your Real Estate Business?
-         </h2>
-          <p className="text-xl text-gray-300">
-            Join leading real estate professionals leveraging AI to grow their business.
-          </p>
-        </div>
 
-        {/* Form Section */}
-        <div
-          id="contact-form"
-          className="max-w-2xl mx-auto bg-gray-800/50 rounded-2xl p-8 backdrop-blur-sm shadow-lg"
-        >
-          <iframe
-            src="https://api.leadconnectorhq.com/widget/form/Pa6EFHDZSehyAEhGoHJF"
-            style={{
-              border: '1px solid rgba(255, 255, 255, 0.2)',
-              padding: '10px',
-            }}
-            className="w-full min-h-[500px]"
-            title="Contact Form"
-          ></iframe>
+      {/* Final CTA with Form */}
+      <section className="py-32 hero-gradient relative">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 purple-gradient-text">
+              Ready to Transform Your Real Estate Business?
+            </h2>
+            <p className="text-xl text-gray-300">
+              Join leading real estate professionals leveraging AI to grow their business.
+            </p>
+          </div>
+
+          {/* Form Section */}
+          <div
+            id="contact-form"
+            className="max-w-2xl mx-auto bg-purple-800/50 rounded-2xl p-8 backdrop-blur-sm shadow-lg"
+          >
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/Pa6EFHDZSehyAEhGoHJF"
+              style={{
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                padding: '10px',
+              }}
+              className="w-full min-h-[500px]"
+              title="Contact Form"
+            ></iframe>
+          </div>
         </div>
-      </div>
-    </section>      
+      </section>
     </div>
   );
 }
