@@ -320,8 +320,8 @@ function App() {
                   </div>
                 </div>
                 <div className="mt-10 p-6 glass-card-highlight rounded-xl">
-                  <p className="text-center text-lg">
-                    <span className="font-bold text-purple-400">Save over $45,000 annually</span> while improving lead response times and conversion rates
+                  <p className="text-center text-lg text-white">
+                    Save over $45,000 annually while improving lead response times and conversion rates
                   </p>
                 </div>
               </div>
