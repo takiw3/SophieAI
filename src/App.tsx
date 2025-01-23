@@ -26,7 +26,8 @@ function App() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-dark/80 backdrop-blur-lg border-b border-purple-600/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-3">
+              <img src="/logo.svg" alt="Task Force AI Logo" className="h-8 w-8" />
               <span className="text-xl font-bold purple-gradient-text">Task Force AI</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
@@ -64,7 +65,7 @@ function App() {
                 10x Your GCI with Sophie AI
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-                Sophie is a cutting-edge AI voice agent trained on sales scripts that have generated millions in GCI. Book appointments. Qualify leads. Scale your business. 24/7.
+                Sophie is trained on real estate sales scripts that have generated millions in GCI. Book appointments. Qualify leads. Scale your business. 24/7.
               </p>
               <button 
                 onClick={() => scrollToSection('contact-form')}
@@ -140,7 +141,7 @@ function App() {
                   </li>
                   <li className="flex items-center space-x-4">
                     <ChevronRight className="w-6 h-6 text-red-400" />
-                    <span className="text-red-400">Time spent on mannual follow-ups</span>
+                    <span className="text-red-400">Time spent on manual follow-ups</span>
                   </li>
                   <li className="flex items-center space-x-4">
                     <ChevronRight className="w-6 h-6 text-red-400" />
@@ -338,8 +339,9 @@ function App() {
                   features: [
                     "Inbound & Outbound Calls",
                     "10 Simultaneous Calls",
-                    "Unlimited Call Minutes up to 4000 minutes, then $0.13/min",
+                    "Unlimited Call Minutes",
                     "Basic CRM integration",
+                    "Custom Property Database",
                     "24/7 365 Availability"
                   ]
                 },
@@ -408,7 +410,7 @@ function App() {
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   padding: '10px',
                 }}
-                className="w-full h-[400px]"
+                className="w-full h-[300px]"
                 title="Contact Form"
               ></iframe>
             </div>
