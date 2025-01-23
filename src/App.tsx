@@ -65,7 +65,7 @@ function App() {
                 10x Your GCI with Sophie AI
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-                Sophie is trained on real estate sales scripts that have generated millions in GCI. Book appointments. Qualify leads. Scale your business. 24/7.
+                 Sophie is a cutting-edge voice agent and a member of the Task Force AI workforce. Book appointments. Qualify leads. Scale your business. 24/7.
               </p>
               <button 
                 onClick={() => scrollToSection('contact-form')}
