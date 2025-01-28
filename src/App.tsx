@@ -334,8 +334,8 @@ function App() {
               {[
                 {
                   name: "Standard",
-                  price: "$1,000",
-                  setup: "$3,500",
+                  price: "$0.25",
+                  setup: "$0",
                   features: [
                     "Inbound & Outbound Calls",
                     "10 Simultaneous Calls",
@@ -347,8 +347,8 @@ function App() {
                 },
                 {
                   name: "Advanced",
-                  price: "$1,200",
-                  setup: "$4,000",
+                  price: "$0.40",
+                  setup: "$3,000",
                   features: [
                     "Everything in Standard plus",
                     "20+ Simultaneous Calls",
@@ -363,7 +363,7 @@ function App() {
                   <h3 className="text-2xl font-bold mb-3">{plan.name}</h3>
                   <div className="mb-8">
                     <span className="text-4xl font-bold purple-gradient-text">{plan.price}</span>
-                    <span className="text-gray-400">/month</span>
+                    <span className="text-gray-400">/minute</span>
                     <p className="text-gray-400">+{plan.setup} setup</p>
                     <p className="text-purple-400 mt-3 flex items-center"> </p>
                   </div>
