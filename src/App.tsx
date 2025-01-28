@@ -364,7 +364,7 @@ function App() {
                   <div className="mb-8">
                     <span className="text-4xl font-bold purple-gradient-text">{plan.price}</span>
                     <span className="text-gray-400">/minute</span>
-                    <p className="text-gray-400">+{plan.setup} setup</p>
+                    <p className="text-gray-400">+{plan.setup} setup fee</p>
                     <p className="text-purple-400 mt-3 flex items-center"> </p>
                   </div>
                   <ul className="space-y-4 mb-8">
