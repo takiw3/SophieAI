@@ -71,7 +71,7 @@ function App() {
                 onClick={() => scrollToSection('contact-form')}
                 className="bg-purple-600 hover:bg-purple-700 text-white px-10 py-5 rounded-xl text-lg font-semibold transition-all transform hover:scale-105 purple-glow"
               >
-                Try Sophie Today
+                Call Sophie Now
               </button>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24">
