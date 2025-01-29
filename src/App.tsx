@@ -334,7 +334,7 @@ function App() {
               {[
                 {
                   name: "Standard",
-                  price: "$0.25",
+                  price: "$0.30",
                   setup: "$0",
                   features: [
                     "Inbound & Outbound Calls",
@@ -347,7 +347,7 @@ function App() {
                 },
                 {
                   name: "Advanced",
-                  price: "$0.40",
+                  price: "$0.45",
                   setup: "$3,000",
                   features: [
                     "Everything in Standard plus",
