@@ -526,37 +526,6 @@ function App() {
                         placeholder="(123) 456-7890"
                       />
                     </div>
-                    
-                    <div>
-                      <label htmlFor="company" className="block text-gray-300 mb-2">
-                        Company Name
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full bg-purple-900/50 border border-purple-500/30 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                        placeholder="Your Real Estate Company"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-gray-300 mb-2">
-                      Tell us about your business needs
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      rows={4}
-                      className="w-full bg-purple-900/50 border border-purple-500/30 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none"
-                      placeholder="What are your main challenges with lead management?"
-                    ></textarea>
-                  </div>
                   
                   <button
                     type="submit"
