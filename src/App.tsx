@@ -10,14 +10,66 @@ import {
   Home, 
   ChevronRight,
   Check,
-  Star
+  Star,
+  Loader2
 } from 'lucide-react';
 
 function App() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState('');
   
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+  
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitError('');
+    
+    try {
+      const response = await fetch('https://hook.us2.make.com/zli9v1t3wpr9d8pskqjd7b1sct0g83hr', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      if (!response.ok) {
+        throw new Error('Failed to submit form. Please try again later.');
+      }
+      
+      setSubmitSuccess(true);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        message: '',
+      });
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : 'An unexpected error occurred');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   return (
@@ -71,7 +123,7 @@ function App() {
                 onClick={() => scrollToSection('contact-form')}
                 className="bg-purple-600 hover:bg-purple-700 text-white px-10 py-5 rounded-xl text-lg font-semibold transition-all transform hover:scale-105 purple-glow"
               >
-                Call Sophie Now
+                Try Sophie Today
               </button>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24">
@@ -334,8 +386,8 @@ function App() {
               {[
                 {
                   name: "Standard",
-                  price: "$0.40",
-                  setup: "$500",
+                  price: "$1,000",
+                  setup: "$3,500",
                   features: [
                     "Inbound & Outbound Calls",
                     "10 Simultaneous Calls",
@@ -347,8 +399,8 @@ function App() {
                 },
                 {
                   name: "Advanced",
-                  price: "$0.60",
-                  setup: "$3,000",
+                  price: "$1,200",
+                  setup: "$4,000",
                   features: [
                     "Everything in Standard plus",
                     "20+ Simultaneous Calls",
@@ -363,8 +415,8 @@ function App() {
                   <h3 className="text-2xl font-bold mb-3">{plan.name}</h3>
                   <div className="mb-8">
                     <span className="text-4xl font-bold purple-gradient-text">{plan.price}</span>
-                    <span className="text-gray-400">/minute</span>
-                    <p className="text-gray-400">+{plan.setup} setup fee</p>
+                    <span className="text-gray-400">/month</span>
+                    <p className="text-gray-400">+{plan.setup} setup</p>
                     <p className="text-purple-400 mt-3 flex items-center"> </p>
                   </div>
                   <ul className="space-y-4 mb-8">
@@ -399,20 +451,133 @@ function App() {
               </p>
             </div>
 
-            {/* Form Section */}
+            {/* Custom Form Section */}
             <div
               id="contact-form"
               className="max-w-2xl mx-auto bg-purple-800/50 rounded-2xl p-8 backdrop-blur-sm shadow-lg"
             >
-              <iframe
-                src="https://api.leadconnectorhq.com/widget/form/Pa6EFHDZSehyAEhGoHJF"
-                style={{
-                  border: '1px solid rgba(255, 255, 255, 0.2)',
-                  padding: '10px',
-                }}
-                className="w-full h-[400px]"
-                title="Contact Form"
-              ></iframe>
+              {submitSuccess ? (
+                <div className="text-center py-8">
+                  <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Check className="w-8 h-8 text-green-400" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">Thanks for Your Interest!</h3>
+                  <p className="text-gray-300">
+                    Your information has been received. Our team will contact you shortly to discuss how Sophie AI can transform your real estate business.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <h3 className="text-2xl font-bold text-center mb-6">Get Started with Sophie AI</h3>
+                  
+                  {submitError && (
+                    <div className="bg-red-500/20 text-red-300 p-4 rounded-xl">
+                      {submitError}
+                    </div>
+                  )}
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-gray-300 mb-2">
+                        Full Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full bg-purple-900/50 border border-purple-500/30 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        placeholder="John Smith"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="email" className="block text-gray-300 mb-2">
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full bg-purple-900/50 border border-purple-500/30 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        placeholder="you@example.com"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="phone" className="block text-gray-300 mb-2">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full bg-purple-900/50 border border-purple-500/30 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        placeholder="(123) 456-7890"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="company" className="block text-gray-300 mb-2">
+                        Company Name
+                      </label>
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        className="w-full bg-purple-900/50 border border-purple-500/30 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        placeholder="Your Real Estate Company"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="message" className="block text-gray-300 mb-2">
+                      Tell us about your business needs
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      rows={4}
+                      className="w-full bg-purple-900/50 border border-purple-500/30 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none"
+                      placeholder="What are your main challenges with lead management?"
+                    ></textarea>
+                  </div>
+                  
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-4 rounded-xl font-semibold transition-all purple-glow disabled:opacity-70 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? (
+                      <span className="flex items-center justify-center">
+                        <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                        Submitting...
+                      </span>
+                    ) : (
+                      "Get Started with Sophie AI"
+                    )}
+                  </button>
+                  
+                  <p className="text-gray-400 text-sm text-center mt-4">
+                    By submitting this form, you agree to our privacy policy and terms of service.
+                  </p>
+                </form>
+              )}
             </div>
           </div>
         </section>
