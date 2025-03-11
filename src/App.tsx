@@ -31,12 +31,36 @@ function App() {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const formatPhoneNumber = (value: string) => {
+    // Remove all non-numeric characters
+    const numericValue = value.replace(/\D/g, '');
+    
+    // Remove leading 1 if present, as we'll add it back
+    const baseNumber = numericValue.startsWith('1') ? numericValue.slice(1) : numericValue;
+    
+    // Format for display: (XXX) XXX-XXXX
+    if (baseNumber.length >= 10) {
+      return `(${baseNumber.slice(0,3)}) ${baseNumber.slice(3,6)}-${baseNumber.slice(6,10)}`;
+    }
+    return baseNumber;
+  };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    
+    if (name === 'phone') {
+      // Format the phone number for display
+      const formattedNumber = formatPhoneNumber(value);
+      setFormData(prev => ({
+        ...prev,
+        [name]: formattedNumber
+      }));
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    }
   };
   
   const handleSubmit = async (e: React.FormEvent) => {
@@ -45,12 +69,19 @@ function App() {
     setSubmitError('');
     
     try {
+      // Convert phone to E.164 format (+1XXXXXXXXXX)
+      const numericPhone = formData.phone.replace(/\D/g, '');
+      const e164Phone = `+1${numericPhone.startsWith('1') ? numericPhone.slice(1) : numericPhone}`;
+      
       const response = await fetch('https://hook.us2.make.com/zli9v1t3wpr9d8pskqjd7b1sct0g83hr', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          phone: e164Phone
+        }),
       });
       
       if (!response.ok) {
@@ -117,7 +148,7 @@ function App() {
                 10x Your GCI with Sophie AI
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-                 Sophie is a cutting-edge voice agent and a member of the Task Force AI workforce. Book appointments. Qualify leads. Scale your business. 24/7.
+                Sophie is a cutting-edge voice agent and a member of the Task Force AI workforce. Book appointments. Qualify leads. Scale your business. 24/7.
               </p>
               <button 
                 onClick={() => scrollToSection('contact-form')}
